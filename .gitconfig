@@ -1,0 +1,30 @@
+[sendemail]
+	suppresscc = all
+[wrgit]
+	username = aismail
+	autoupdate = true
+[color]
+	status = auto
+	branch = auto
+[user]
+   name = Aws Ismail
+   email = aws.ismail@gmail.com
+[diff]
+	renamelimit = 0
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    ll = log --color --oneline
+    l = log --color
+    g = grep
+    a = add
+    d = diff --color
+    s = status
+    c = commit
+    sh = show --color
+    hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s%Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[prjgit]
+	username = aismail
+	autoupdate = true
