@@ -28,21 +28,6 @@ servers = (
   { address = "irc.rizon.net"; chatnet = "Rizon"; port = "6667"; },
   { address = "irc.link-net.org"; chatnet = "LinkNet"; port = "6667"; },
   { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
-  {
-    address = "ala-irc.wrs.com";
-    chatnet = "ala-irc";
-    port = "6667";
-    use_ssl = "no";
-    ssl_verify = "no";
-    autoconnect = "yes";
-  },
-  {
-    address = "yow-irc.wrs.com";
-    chatnet = "yow-irc";
-    port = "6667";
-    use_ssl = "no";
-    ssl_verify = "no";
-  }
 );
 
 chatnets = {
@@ -109,20 +94,11 @@ chatnets = {
   };
   SILC = { type = "SILC"; };
   Ubuntu = { type = "IRC"; };
-  "ala-irc" = { type = "IRC"; };
-  "yow-irc" = { type = "IRC"; };
 };
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
-  { name = "#userspace"; chatnet = "ala-irc"; autojoin = "yes"; },
-  { name = "#yow"; chatnet = "ala-irc"; autojoin = "yes"; },
-  { name = "#tux"; chatnet = "ala-irc"; autojoin = "yes"; },
-  { name = "#cgl"; chatnet = "ala-irc"; autojoin = "yes"; },
-  { name = "#toolchain"; chatnet = "ala-irc"; autojoin = "yes"; },
-  { name = "#ldat"; chatnet = "ala-irc"; autojoin = "yes"; },
-  { name = "#infrastructure"; chatnet = "ala-irc"; autojoin = "yes"; }
+  { name = "silc"; chatnet = "silc"; autojoin = "No"; }
 );
 
 aliases = {
@@ -343,28 +319,7 @@ hilights = (
   { text = "aismail_jan04"; nick = "yes"; word = "yes"; }
 );
 ignores = (
-  {
-    mask = "JOINS";
-    level = "PARTS QUITS";
-    channels = (
-      "#userspace",
-      "#tux",
-      "#yow",
-      "#cgl",
-      "#toolchain",
-      "#infrastructure",
-      "#ldat"
-    );
-  },
-  { level = "JOINS PARTS QUITS"; },
-  { level = "NICKS"; channels = ( "#userspace" ); },
-  { level = "NICKS"; channels = ( "#yow" ); },
-  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#tux" ); },
-  { level = "NICKS"; channels = ( "#cgl" ); },
-  { level = "NICKS"; channels = ( "#toolchain" ); },
-  { level = "NICKS"; channels = ( "#ldat" ); },
-  { level = "NICKS"; channels = ( "#infrastructure" ); },
-  { level = "NICKS"; channels = ( "#corelinux" ); }
+  { level = "JOINS PARTS QUITS"; }
 );
 logs = { };
 keyboard = (
@@ -373,145 +328,5 @@ keyboard = (
 );
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
-  2 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#userspace";
-        tag = "ala-irc";
-      }
-    );
-  };
-  3 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#yow";
-        tag = "ala-irc";
-      }
-    );
-  };
-  4 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#tux";
-        tag = "ala-irc";
-      }
-    );
-  };
-  5 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#cgl";
-        tag = "ala-irc";
-      }
-    );
-  };
-  6 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#toolchain";
-        tag = "ala-irc";
-      }
-    );
-  };
-  7 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#ldat";
-        tag = "ala-irc";
-      }
-    );
-  };
-  8 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#infrastructure";
-        tag = "ala-irc";
-      }
-    );
-  };
-  9 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#corelinux";
-        tag = "ala-irc";
-      }
-    );
-  };
-  10 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#idp";
-        tag = "ala-irc";
-      }
-    );
-  };
-  11 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#ovp";
-        tag = "ala-irc";
-      }
-    );
-  };
-  12 = {
-    items = (
-      {
-        type = "QUERY";
-        chat_type = "IRC";
-        name = "vmesoff";
-        tag = "ala-irc";
-      }
-    );
-  };
-  13 = {
-    items = (
-      {
-        type = "QUERY";
-        chat_type = "IRC";
-        name = "benvm";
-        tag = "ala-irc";
-      }
-    );
-  };
-  14 = {
-    items = (
-      {
-        type = "QUERY";
-        chat_type = "IRC";
-        name = "mvanheul";
-        tag = "ala-irc";
-      }
-    );
-  };
-  15 = {
-    items = (
-      {
-        type = "QUERY";
-        chat_type = "IRC";
-        name = "seebs";
-        tag = "ala-irc";
-      }
-    );
-  };
 };
 mainwindows = { 1 = { first_line = "2"; lines = "67"; }; };
